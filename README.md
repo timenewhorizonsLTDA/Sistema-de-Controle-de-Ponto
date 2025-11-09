@@ -1,10 +1,10 @@
-# 🕒 Sistema de Controle de Ponto
+# Sistema de Controle de Ponto
 
 Um projeto simples de **backend em Node.js** com **Express** e **MySQL**, que permite cadastrar funcionários, registrar batidas de ponto (entrada, saída, intervalo) e gerar relatórios de horas trabalhadas, extras e atrasos.
 
 ---
 
-## 🚀 Tecnologias utilizadas
+## Tecnologias utilizadas
 
 * [Node.js](https://nodejs.org/)
 * [Express](https://expressjs.com/)
@@ -13,7 +13,7 @@ Um projeto simples de **backend em Node.js** com **Express** e **MySQL**, que pe
 
 ---
 
-## ⚙️ Funcionalidades
+## Funcionalidades
 
 * Cadastro de funcionários
 * Registro de batidas de ponto (entrada, saída e intervalo)
@@ -23,7 +23,7 @@ Um projeto simples de **backend em Node.js** com **Express** e **MySQL**, que pe
 
 ---
 
-## 🗄️ Banco de dados
+## Banco de dados
 
 ```sql
 CREATE DATABASE controle_ponto;
@@ -46,7 +46,7 @@ CREATE TABLE registros (
 
 ---
 
-## 🔧 Instalação
+## Instalação
 
 1. Clone o repositório:
 
@@ -85,11 +85,11 @@ http://localhost:3000
 
 ---
 
-## 📬 Rotas da API
+## Rotas da API
 
-### 👤 Funcionários
+### Funcionários
 
-#### ➕ Cadastrar funcionário
+####  Cadastrar funcionário
 
 `POST /funcionarios`
 
@@ -102,15 +102,15 @@ http://localhost:3000
 }
 ```
 
-#### 📋 Listar funcionários
+#### Listar funcionários
 
 `GET /funcionarios`
 
 ---
 
-### 🕐 Registros de ponto
+### Registros de ponto
 
-#### ➕ Registrar ponto
+#### Registrar ponto
 
 `POST /ponto`
 
@@ -125,7 +125,7 @@ http://localhost:3000
 
 Tipos aceitos: `"entrada"`, `"saida"`, `"intervalo"`
 
-#### 📄 Listar registros de um funcionário
+#### Listar registros de um funcionário
 
 `GET /ponto/:idFuncionario`
 
@@ -137,9 +137,9 @@ GET /ponto/1
 
 ---
 
-### 📊 Relatório
+###  Relatório
 
-#### 📈 Gerar relatório de horas
+####  Gerar relatório de horas
 
 `GET /relatorio/:idFuncionario`
 
@@ -162,7 +162,7 @@ GET /relatorio/1
 
 ---
 
-## 🧠 Lógica de cálculo
+## Lógica de cálculo
 
 * Jornada padrão: **8 horas por dia**
 * Se o funcionário trabalhar **mais de 8h**, o excedente é contado como **hora extra**
