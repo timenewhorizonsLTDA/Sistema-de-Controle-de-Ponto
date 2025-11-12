@@ -7,47 +7,52 @@
   <link rel="stylesheet" href="front.css">
 </head>
 <body>
+  
   <div class="container">
     <h1>Sistema de Controle de Ponto</h1>
 
-    <section>
-      <h2>Cadastrar Funcionário</h2>
-      <input type="text" id="nome" placeholder="Nome">
-      <input type="text" id="cargo" placeholder="Cargo">
-      <button id="btnCadastrar">Cadastrar</button>
-    </section>
-
-    <section>
-      <h2>Listar Funcionários</h2>
-      <button id="btnListar">Atualizar Lista</button>
-      <ul id="listaFuncionarios"></ul>
-    </section>
-
+     <div class ="table">
     <section>
       <h2>Registrar Ponto</h2>
-      <input type="number" id="funcionarioIdPonto" placeholder="ID do Funcionário">
+      <input type="number" id="funcionarioIdPonto" placeholder="ID do Funcionário" min="1"> 
       <select id="tipoPonto">
         <option value="entrada">Entrada</option>
         <option value="saida">Saída</option>
       </select>
       <button id="btnRegistrarPonto">Registrar</button>
     </section>
-
+      </div>   
+<div class ="table">
     <section>
       <h2>Ver Registros de Ponto</h2>
-      <input type="number" id="idConsulta" placeholder="ID do Funcionário">
+      <input type="number" id="idConsulta" placeholder="ID do Funcionário" min="1">
       <button id="btnConsultarPonto">Consultar</button>
       <ul id="listaPontos"></ul>
     </section>
-
+</div>
+<div class ="table">
+    <section>
+      <h2>Cadastrar Funcionário</h2>
+      <input type="text" id="nome" placeholder="Nome">
+      <input type="text" id="cargo" placeholder="Cargo">
+      <button id="btnCadastrar">Cadastrar</button>
+    </section>
+    </div>
+    <div class ="table">
+    <section>
+      <h2>Listar Funcionários</h2>
+      <button id="btnListar">Atualizar Lista</button>
+      <ul id="listaFuncionarios"></ul>
+    </section>
+    </div>
+<div class ="table">
     <section>
       <h2>Relatório</h2>
-      <input type="number" id="idRelatorio" placeholder="ID do Funcionário">
+      <input type="number" id="idRelatorio" placeholder="ID do Funcionário" min="1">
       <button id="btnRelatorio">Gerar Relatório</button>
       <div id="resultadoRelatorio"></div>
     </section>
   </div>
-
   <script src="front.js"></script>
 </body>
 </html>
