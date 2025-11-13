@@ -26,7 +26,9 @@ h2
  background: rgba(47, 42, 42, 0.9);
  box-shadow: 0 0 10px rgba(0,0,0,0.1);
  Border-radius:12px;
+
 }
+
 h1 {
   text-align: center;
   color: #141515;
@@ -42,7 +44,11 @@ input, select, button {
  background-color:rgb(101, 99, 99);
   padding: 10px;
   border-radius: 8px;
-  border: 1px solid #000000;
+  border: 1px solid #999595;
+}
+input::placeholder {
+  color: #c5c5c5; 
+  opacity: 1;    
 }
 
 button {
@@ -54,7 +60,7 @@ button {
 }
 
 button:hover {
-  background-color: #09090a;
+  background-color:rgba(0,0,0,0.1);
 }
 
 ul {
