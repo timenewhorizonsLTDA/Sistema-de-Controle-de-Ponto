@@ -1,22 +1,20 @@
 const express = require('express');
-const cors = require('cors'); // ✅ Importa o middleware CORS
+const cors = require('cors'); 
 const db = require('./db');
 
 const app = express();
 
-// ✅ Habilita CORS para permitir acesso do frontend (Live Server)
+
 app.use(cors({
-  origin: 'http://127.0.0.1:5500', // permite apenas o endereço do seu front-end
-  methods: ['GET', 'POST'],        // define os métodos permitidos
-  allowedHeaders: ['Content-Type'] // define os cabeçalhos aceitos
+  origin: 'http://127.0.0.1:5500', 
+  methods: ['GET', 'POST'],        
+  allowedHeaders: ['Content-Type'] 
 }));
 
-// Middleware padrão do Express
+
 app.use(express.json());
 
-// ===================== ROTAS =====================
 
-// 🧩 Cadastrar funcionário
 app.post('/funcionarios', (req, res) => {
   const { nome, cargo } = req.body;
 
@@ -28,7 +26,7 @@ app.post('/funcionarios', (req, res) => {
     });
 });
 
-// 🧩 Listar funcionários
+
 app.get('/funcionarios', (req, res) => {
   db.query('SELECT * FROM funcionarios', (erro, resultados) => {
     if (erro) return res.status(500).json({ erro: 'Erro ao buscar funcionários' });
@@ -36,7 +34,7 @@ app.get('/funcionarios', (req, res) => {
   });
 });
 
-// 🧩 Registrar ponto
+
 app.post('/ponto', (req, res) => {
   const { funcionario_id, tipo } = req.body;
 
@@ -56,7 +54,7 @@ app.post('/ponto', (req, res) => {
   });
 });
 
-// 🧩 Consultar registros de ponto
+
 app.get('/ponto/:id', (req, res) => {
   const id = req.params.id;
 
@@ -66,7 +64,7 @@ app.get('/ponto/:id', (req, res) => {
   });
 });
 
-// 🧩 Gerar relatório
+
 app.get('/relatorio/:id', (req, res) => {
   const id = req.params.id;
 
